@@ -1,0 +1,120 @@
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 0519ecb..89516ba 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1 +1,111 @@[m
+[31m- [m
+\ No newline at end of file[m
+[32m+[m[32m# Quora Query Matcher[m
+[32m+[m
+[32m+[m[32mA web application that uses BERT-based models to determine the similarity between questions.[m
+[32m+[m
+[32m+[m[32m## Project Structure[m
+[32m+[m
+[32m+[m[32m### Backend[m
+[32m+[m
+[32m+[m[32m- FastAPI application for serving the model[m
+[32m+[m[32m- BERT-based model for question similarity analysis[m
+[32m+[m[32m- Training script for fine-tuning on Quora question pairs[m
+[32m+[m
+[32m+[m[32m### Frontend[m
+[32m+[m
+[32m+[m[32m- React-based UI for interacting with the model[m
+[32m+[m[32m- Modern dark theme interface[m
+[32m+[m[32m- Input fields for two questions[m
+[32m+[m[32m- Similarity score display[m
+[32m+[m
+[32m+[m[32m## Setup Instructions[m
+[32m+[m
+[32m+[m[32m### Backend[m
+[32m+[m
+[32m+[m[32m1. Navigate to the backend directory:[m
+[32m+[m[32m   ```[m
+[32m+[m[32m   cd backend[m
+[32m+[m[32m   ```[m
+[32m+[m
+[32m+[m[32m2. Install dependencies:[m
+[32m+[m[32m   ```[m
+[32m+[m[32m   pip install -r requirements.txt[m
+[32m+[m[32m   ```[m
+[32m+[m
+[32m+[m[32m3. Run the server:[m
+[32m+[m[32m   ```[m
+[32m+[m[32m   python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000[m
+[32m+[m[32m   ```[m
+[32m+[m
+[32m+[m[32m### Frontend[m
+[32m+[m
+[32m+[m[32m1. Navigate to the frontend directory:[m
+[32m+[m[32m   ```[m
+[32m+[m[32m   cd frontend[m
+[32m+[m[32m   ```[m
+[32m+[m
+[32m+[m[32m2. Install dependencies:[m
+[32m+[m[32m   ```[m
+[32m+[m[32m   npm install[m
+[32m+[m[32m   ```[m
+[32m+[m
+[32m+[m[32m3. Start the development server:[m
+[32m+[m[32m   ```[m
+[32m+[m[32m   npm start[m
+[32m+[m[32m   ```[m
+[32m+[m
+[32m+[m[32m## Usage[m
+[32m+[m
+[32m+[m[32m1. Enter two questions in the input fields[m
+[32m+[m[32m2. Click the "Check Similarity" button[m
+[32m+[m[32m3. View the similarity score (0-1 scale)[m
+[32m+[m
+[32m+[m[32m## Training the Model[m
+[32m+[m
+[32m+[m[32mThe model can be trained on the Quora question pairs dataset:[m
+[32m+[m
+[32m+[m[32m```[m
+[32m+[m[32mcd backend[m
+[32m+[m[32mpython app/model/train.py[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m## Technologies Used[m
+[32m+[m
+[32m+[m[32m- Python 3.8+[m
+[32m+[m[32m- FastAPI[m
+[32m+[m[32m- PyTorch[m
+[32m+[m[32m- Transformers (BERT)[m
+[32m+[m[32m- React[m
+[32m+[m[32m- TypeScript[m
+[32m+[m
+[32m+[m[32m## Features[m
+[32m+[m
+[32m+[m[32m- Train a BERT model on question pairs[m
+[32m+[m[32m- Check similarity between two questions[m
+[32m+[m[32m- Modern and responsive user interface[m
+[32m+[m[32m- GPU acceleration (CUDA)[m
+[32m+[m[32m- RESTful API[m
+[32m+[m
+[32m+[m[32m## API Endpoints[m
+[32m+[m
+[32m+[m[32m- `GET /health`: Check if the server is running[m
+[32m+[m[32m- `POST /check-similarity`: Check similarity between two questions[m
+[32m+[m[41m  [m
+[32m+[m[32m  Request body:[m
+[32m+[m[32m  ```json[m
+[32m+[m[32m  {[m
+[32m+[m[32m    "question1": "How do I learn Python?",[m
+[32m+[m[32m    "question2": "What's the best way to start with Python?"[m
+[32m+[m[32m  }[m
+[32m+[m[32m  ```[m
+[32m+[m[41m  [m
+[32m+[m[32m  Response:[m
+[32m+[m[32m  ```json[m
+[32m+[m[32m  {[m
+[32m+[m[32m    "similarity_score": 0.87,[m
+[32m+[m[32m    "is_duplicate": true[m
+[32m+[m[32m  }[m
+[32m+[m[32m  ```[m
+[32m+[m
+[32m+[m[32m## License[m
+[32m+[m
+[32m+[m[32mMIT[m[41m [m
+\ No newline at end of file[m
